@@ -39,9 +39,10 @@ for n in range(0,100):
 for z in lista2:
     print (len(z), "   ",(z))
 
-
+print()
 print ("3. Calcule el largo promedio de los strings en lista.")
-
+print ('-----------------------------------------------------')
+print()
 largo_lista2 = len (lista2)
 largo_elemento = 0
 n=0

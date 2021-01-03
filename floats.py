@@ -17,22 +17,36 @@ caracteres ='0123456789'
 lista = []
 for n in range(0,100):
     string_aleatorio = ''
-    largo = random.randint(10, 50)
+    largo = random.randint(1,2)  
     for i in range(0, largo):
         string_aleatorio += random.choice(caracteres)
-    lista.append(string_aleatorio)
+        enteros=int(string_aleatorio)
+        if enteros >9 and enteros<51 :
+            lista.append(enteros)
 
+Valor_Max= max([lista])
 
+promedio=0
 suma =0
+cont=0
 for c in lista :
-    numero = float(c)
-    numero= numero/1000
+    numero = (c)
+    if numero>cont :
+        cont=numero
     print(numero)
     suma = suma + numero
     promedio = suma/100
 
 print()
-print (promedio)
-
-
-
+print ('Suma de los Numeros : ',suma)
+print()
+print('Promedio  : ',promedio)
+print()
+print(Valor_Max)
+print('Valor Máximo :',cont)
+print('--------------------------------')
+suma =0
+for c in lista :
+    numero = (c)
+    print('numeros enteros entre 10 y 50 :',numero,'Menos valor promedio ',promedio,"  ", 
+    round(numero-promedio,3))
